@@ -7,7 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  ActivityIndicator, // เพิ่ม ActivityIndicator สำหรับแสดงสถานะ Loading
+  ActivityIndicator,
   Platform,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -22,7 +22,7 @@ export const initialMessageHistory = [
   {
     id: "default",
     text: `สวัสดีครับ! ผมคือ FruitGuruAI ผู้เชี่ยวชาญด้านผลไม้เขตร้อนและผลไม้แปลกใหม่ครับ 🥭
-คุณสนใจจะค้นหาข้อมูลเชิงลึกเกี่ยวกับผลไม้ชนิดไหนเป็นพิเศษไหมครับ? หรืออยากรู้แค่ประโยชน์ต่อสุขภาพของผลไม้ชนิดใด?`,
+คุณสนใจจะค้นหาข้อมูลเชิงลึกเกี่ยวกับผลไม้ชนิดไหนหรืออยากรู้ประโยชน์ต่อสุขภาพของผลไม้ชนิดไหนเป็นพิเศษไหมครับ?`,
     sender: "model",
   },
 ];
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f1f5f9",
   },
   avatar: {
-    width: 32, // ปรับขนาด avatar เล็กน้อยเพื่อให้มีที่ว่างมากขึ้น
+    width: 32, // ปรับขนาด avatar
     height: 32,
     borderRadius: 999,
   },
@@ -237,12 +237,12 @@ const styles = StyleSheet.create({
   messageContainer: {
     flex: 1,
     paddingVertical: 20,
-    paddingHorizontal: 16, // ปรับ padding
+    paddingHorizontal: 16,
   },
   inputContainer: {
     backgroundColor: "#fff",
     paddingHorizontal: 20,
-    paddingBottom: Platform.OS === "ios" ? 30 : 20, // ปรับ padding ด้านล่างสำหรับ iOS
+    paddingBottom: Platform.OS === "ios" ? 30 : 20,
     paddingTop: 10,
   },
   input: {
@@ -251,20 +251,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderColor: "#e5e7eb",
     paddingLeft: 12,
-    paddingVertical: 16, // ปรับขนาด input เล็กน้อย
+    paddingVertical: 16,
     paddingRight: 96,
     color: "#333",
     fontSize: 16,
   },
   button: {
-    backgroundColor: "#2563eb", // สีฟ้าสดใส
+    backgroundColor: "#2563eb",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 6,
     position: "absolute",
     right: 8,
     top: 6,
-    // Add shadow for better visibility
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -273,9 +272,8 @@ const styles = StyleSheet.create({
   },
   messageItem: {
     flexDirection: "row",
-    alignItems: "flex-start", // ให้ข้อความจัดชิดด้านบน
+    alignItems: "flex-start",
     gap: 8,
-    // เพิ่มความกว้างสูงสุดให้ข้อความ
     maxWidth: "90%",
   },
   message: {
@@ -286,7 +284,6 @@ const styles = StyleSheet.create({
     maxWidth: "85%",
     lineHeight: 20,
   },
-  // ลบ styles สำหรับ techTitle และ techDescription ออกแล้ว
   loadingContainer: {
     color: "#475569",
     flexDirection: "row",
@@ -296,6 +293,6 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   loadingText: {
-    color: "#475569", // ⚪ สีเทาเข้ม
+    color: "#475569",
   },
 });
