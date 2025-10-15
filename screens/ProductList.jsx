@@ -43,6 +43,12 @@ export default function ProductList({ navigation }) {
                     value={q}
                     onChangeText={setQ}
                 />
+                <Pressable 
+                    style={[styles.button, styles.chatButton]}
+                    onPress={() => navigation.navigate('ChatScreen')}>
+                    <Text style={styles.buttonText}>ถาม AI</Text>
+                </Pressable>
+
                 <Pressable style={styles.button} onPress={() => navigation.navigate('AddFruit')}>
                     <Text style={styles.buttonText}>เพิ่ม</Text>
                 </Pressable>
