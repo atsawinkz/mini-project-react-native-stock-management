@@ -63,7 +63,7 @@ export default function AddProduct({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f172a", alignItems: "center", justifyContent: "center", padding: 16 },
+  container: { flex: 1, backgroundColor: "#f1f5f9", alignItems: "center", justifyContent: "center", padding: 16 },
   card: { width: "100%", maxWidth: 480, backgroundColor: "#fff", borderRadius: 16, padding: 20, gap: 10, elevation: 4 },
   title: { fontSize: 22, fontWeight: "700", marginBottom: 6 },
   label: { fontSize: 13, color: "#334155" },
