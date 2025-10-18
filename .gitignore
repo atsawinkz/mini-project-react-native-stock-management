@@ -40,8 +40,5 @@ yarn-error.*
 /ios
 /android
 
-# firebase
-firebase.js
-
 # env
 .env
